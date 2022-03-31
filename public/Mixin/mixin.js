@@ -1,7 +1,3 @@
-{/* <template>
-  <div>{{myOption}}</div>
-</template> */}
-
 const app = Vue.createApp({
   myOption: 'hello!',
   mounted(){

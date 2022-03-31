@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <style>
+
+.demo {
+    font-family: sans-serif;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 20px 30px;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    user-select: none;
+    overflow-x: auto;
+  }
+  
+  .full-page {
+    height: 100vh
+  }
+
+  </style>
+</head>
+<body>
+  <div id="dynamic-arguments-example" class="demo">
+    <p>Scroll down the page</p>
+    <p v-pin="100">Stick me 100px from the top of the page</p>
+  </div>
+
+  <div id="dynamicexample" class="demo full-page">
+    <h2>Scroll down the page2</h2>
+    <input type="range" min="0" max="500" v-model="pinPadding">
+    <p v-pin2:[direction]="pinPadding">Stick me {{ pinPadding + 'px' }} from the {{ direction }} of the page</p>
+  </div>
+
+  <script type="module" src="/Directive/dynamic.js"></script>
+</body>
+</html>

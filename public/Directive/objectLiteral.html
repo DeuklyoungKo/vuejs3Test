@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <style>
+
+.demo {
+    font-family: sans-serif;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 20px 30px;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    user-select: none;
+    overflow-x: auto;
+  }
+  
+  .full-page {
+    height: 100vh
+  }
+
+  </style>
+</head>
+<body>
+
+  <div id="dynamicexample" class="demo full-page">
+    <div v-demo="{ color: 'white', text: 'hello!' }">
+      <pre>{ color: 'white', text: 'hello!' }</pre>      
+    </div>
+  </div>
+
+  <script type="module" src="/Directive/objectLiteral.js"></script>
+</body>
+</html>
